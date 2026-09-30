@@ -16,11 +16,12 @@ public class ClientEcho {
             Socket cs = new Socket("localhost", 5000);
     
             System.out.println("Inserisci qualcosa: ");
-            Scanner scanner = new Scanner(String);
+            Scanner scanner = new Scanner(System.in);
             String phrase = scanner.next();
              BufferedReader in = new BufferedReader(new InputStreamReader(cs.getInputStream()));
             PrintWriter out = new PrintWriter(cs.getOutputStream() , true);
-    
+            out.write(phrase);
+            System.out.println(in.readLine());
     
         }catch(Exception e){
     
