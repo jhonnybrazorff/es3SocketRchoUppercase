@@ -15,7 +15,8 @@ public class ServerEcho {
         BufferedReader in = new BufferedReader(new InputStreamReader(cs.getInputStream()));
         PrintWriter out = new PrintWriter(cs.getOutputStream() , true);
         String messaggio = in.readLine();
-        out.write(messaggio.toUpperCase());
+        System.out.println(messaggio);
+        out.println(messaggio.toUpperCase());
        
     }catch(Exception e) {
     System.out.println(e.getMessage());

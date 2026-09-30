@@ -18,15 +18,20 @@ public class ClientEcho {
             System.out.println("Inserisci qualcosa: ");
             Scanner scanner = new Scanner(System.in);
             String phrase = scanner.next();
-             BufferedReader in = new BufferedReader(new InputStreamReader(cs.getInputStream()));
+
+
+            BufferedReader in = new BufferedReader(new InputStreamReader(cs.getInputStream()));
             PrintWriter out = new PrintWriter(cs.getOutputStream() , true);
-            out.write(phrase);
+            
+            
+            
+            out.println(phrase);
             System.out.println(in.readLine());
     
         }catch(Exception e){
     
         }
-        System.out.println("Server in ascolto su porta 5000");
+        //System.out.println("Server in ascolto su porta 5000");
     }
     
 
