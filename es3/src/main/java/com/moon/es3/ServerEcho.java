@@ -14,9 +14,10 @@ public class ServerEcho {
         Socket cs = ss.accept();
         BufferedReader in = new BufferedReader(new InputStreamReader(cs.getInputStream()));
         PrintWriter out = new PrintWriter(cs.getOutputStream() , true);
-        
+
+       
     }catch(Exception e) {
-    
+    System.out.println(e.getMessage());
     }
    
     }
